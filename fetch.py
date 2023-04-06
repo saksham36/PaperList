@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.8
 '''
 Written by: Saksham Consul 04/05/2023
 Script to get all papers of selected authors from 2022 onwards
@@ -146,7 +146,7 @@ def main():
         cumulative_results = load_pickle('papers.pkl')
     except Exception as e:
         print(e, "Papers list pickle not found. Generating papers list")
-        api_key = read_config()["api_key"]
+        api_key = read_config()["serpapi_key"]
         cumulative_results = get_papers(api_key, profs)
         save_pickle(cumulative_results, 'papers.pkl')
 
