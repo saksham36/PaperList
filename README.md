@@ -24,9 +24,9 @@ Tool to obtain list of papers of interested profs from a CSV and parse PDFs into
 
 ### Prerequisites
 
-- One needs to have an account with SerpAPI [https://serpapi.com/]. SerpAPI is used to query Google Scholar, and it allows upto 100 free queries per month.
+- One needs to have an account with [SerpAPI](https://serpapi.com/). SerpAPI is used to query Google Scholar, and it allows upto 100 free queries per month.
 
-- Additionally, one needs access to OpenAI GPT APIs [https://platform.openai.com/account/api-keys].
+- Additionally, one needs access to [OpenAI GPT APIs](https://platform.openai.com/account/api-keys).
 
 Create a `config.yaml` file with the following keys:
 
@@ -66,7 +66,7 @@ Set the `-new` flag to `True` if one wants to create new embeddings. Else set to
 
 ## TODO <a name="todo"></a>
 
-- Instead of using PyPDF, use Grobid [https://huggingface.co/spaces/kermitt2/grobid] for better PDF parsing
+- Instead of using PyPDF, use [Grobid](https://huggingface.co/spaces/kermitt2/grobid) for better PDF parsing
 - Finetune GPT model
 
 ## ✍️ Authors <a name = "authors"></a>
