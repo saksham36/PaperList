@@ -33,9 +33,9 @@ def main():
         print("Embeddings created")
     else:
         df = pd.read_csv('processed/embeddings.csv', index_col=0)
-        df.columns = ['title', 'text', 'embedding']
-        df['embedding'] = df.embedding.apply(
-            lambda x: np.array(x[1:-1].split(', ')).astype(np.float))
+        df.columns = ['text', 'n_tokens', 'embeddings']
+        df['embeddings'] = df.embeddings.apply(
+            lambda x: np.array(x[1:-1].split(', ')).astype(float))
 
     print(answer_question(df, question=args.question, debug=False))
 
@@ -94,7 +94,7 @@ def create_embeddings(max_tokens=500):
     # Load the embeddings into a dataframe
     df = pd.read_csv('processed/embeddings.csv', index_col=0)
     df['embeddings'] = df['embeddings'].apply(eval).apply(np.array)
-
+    print(df.head())
     return df
 
 
